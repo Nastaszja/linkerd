@@ -48,6 +48,8 @@ identityTrustAnchorsPEM: |
 # -- Trust domain used for identity
 # @default -- clusterDomain
 identityTrustDomain: ""
+# -- Additional annotations to add to all deployments (proxy injector, identity, destination)
+deploymentAnnotations: {}
 # -- Additional annotations to add to all pods
 podAnnotations: {}
 # -- Additional labels to add to all pods

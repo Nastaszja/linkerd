@@ -123,6 +123,9 @@ kind: Deployment
 metadata:
   annotations:
     {{ include "partials.annotations.created-by" . }}
+    {{- if .Values.deploymentAnnotations }}
+    {{- toYaml .Values.deploymentAnnotations | nindent 4 }}
+    {{- end }}
   labels:
     app.kubernetes.io/name: destination
     app.kubernetes.io/part-of: Linkerd
